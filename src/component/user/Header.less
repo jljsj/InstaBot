@@ -1,0 +1,187 @@
+
+html, body {
+  height: 1520px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fafafa+0,e2e7f3+100 */
+  background: #fafafa; /* Old browsers */
+  background: -moz-linear-gradient(top, #fafafa 0%, #e2e7f3 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #fafafa 0%, #e2e7f3 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #fafafa 0%, #e2e7f3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#e2e7f3', GradientType=0); /* IE6-9 */
+
+}
+
+@header: user-header;
+.@{header} {
+  max-width: 1200px;
+  margin: auto auto 60px auto;
+  overflow: hidden;
+  &-phone{
+    display: none;
+  }
+  &-logo {
+    margin: 15px 0 0 60px;
+    float: left;
+    & span {
+      background: url('/images/logo-user.png') center/cover;
+      width: 30px;
+      height: 30px;
+      display: block;
+      float: left;
+    }
+    & p {
+      background: url("/images/logo-user-text.png") no-repeat center/100%;
+      width: 59px;
+      height: 30px;
+      display: inline-block;
+      float: left;
+      text-indent: -999px;
+      margin-left: 10px;
+    }
+  }
+  & .ant-menu-horizontal {
+    display: inline-block;
+    position: relative;
+    left: 30%;
+    border-bottom: 1px transparent solid;
+    background: transparent;
+    & .ant-menu-item {
+      color: @primary-color;
+      margin: 20px auto auto auto;
+      padding: 0 25px;
+      border-bottom: 1px transparent solid;
+      &.ant-menu-item-active {
+        color: @primary-color;
+        border-bottom: 1px transparent solid;
+      }
+      & > a {
+        color: @text-color;
+        border-bottom: 1px transparent solid;
+        transition: border .3s;
+        line-height: 24px;
+        &:hover {
+          color: @primary-color;
+          border-bottom: 1px @primary-color solid;
+        }
+      }
+      &.ant-menu-item-selected {
+        border-bottom: 1px transparent solid;
+        color: @text-color;
+        & > a {
+          color: @primary-color;
+          border-bottom: 1px @primary-color solid;
+        }
+      }
+    }
+
+  }
+  &-userName {
+    float: right;
+    line-height: 23px;
+    margin-top: 20px;
+    margin-right: 60px;
+    cursor: pointer;
+    color: @primary-color;
+    position: absolute;
+    top:0;
+    right: 0;
+    & i {
+      font-size: 12px;
+      margin-left: 5px;
+      transform: scale(.5);
+    }
+  }
+  &-login {
+    width: 128px;
+    line-height: 24px;
+    background: @red-color;
+    & a {
+      color: #fff;
+      text-align: right;
+      display: block;
+      margin-right: 20px;
+    }
+    &-hidden {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .@{header} {
+    margin-bottom: 40px;
+    &-logo {
+      margin-left: 10%;
+    }
+    & .ant-menu-horizontal {
+      display: none;
+    }
+    & .user-header-userName {
+      display: none;
+    }
+    &-phone{
+      display: inline-block;
+      background: #fff;
+      box-shadow: 0 8px 20px rgba(0,0,0,.15);
+      font-size: 14px;
+      outline: none;
+      position: absolute;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      background-clip: padding-box;
+      overflow: hidden;
+      &-name{
+        text-align: center;
+        padding: 5px 10px;
+        font-size: 12px;
+        border-top:1px solid @text-color;
+      }
+      &-login-out{
+        & a{
+          font-size: 12px !important;
+          line-height: 30px !important;
+        }
+      }
+      &-hidden{
+        display: none;
+      }
+      & a{
+        text-align: center;
+        color: @text-color;
+        display: block;
+        width: 100%;
+        line-height: 40px;
+        padding: 0 10px;
+        &:hover{
+          background: @hover-color;
+        }
+      }
+    }
+
+    &-phone-menu-icon {
+      width: 20px;
+      height: 16px;
+      float: right;
+      position: relative;
+      right: 10%;
+      top: 25px;
+      & i {
+        width: 20px;
+        height: 2px;
+        background: @primary-color;
+        display: block;
+        margin-top: 5px;
+      }
+      &:before, &:after {
+        display: block;
+        content: '';
+        width: 20px;
+        height: 2px;
+        background: @primary-color;
+      }
+      &:after {
+        margin-top: 5px;
+      }
+    }
+  }
+}

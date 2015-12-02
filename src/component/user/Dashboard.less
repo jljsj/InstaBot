@@ -1,0 +1,311 @@
+@dashboard: dashboard;
+.@{dashboard} {
+  max-width: 1200px;
+  margin: auto;
+  & .content-wap {
+    background: #fff;
+    box-shadow: 0 8px 40px rgba(73, 85, 106, .15);
+  }
+  & .timer, & .info, & .user {
+    text-align: center;
+    height: 100px;
+    & h2 {
+      font-size: 20px;
+      line-height: 39px;
+    }
+    & p {
+      color: @text-color;
+      font-weight: lighter;
+      font-size: 14px;
+    }
+    & ul {
+      overflow: hidden;
+      height: 100%;
+      & li {
+        float: left;
+        padding: 20px;
+        &:first-child {
+          border-right: 1px solid @line-color;
+        }
+      }
+    }
+  }
+  & .timer {
+    & p, & h2 {
+      text-align: left;
+    }
+    & ul li {
+      width: 30%;
+      &:first-child {
+        width: 70%;
+      }
+    }
+    & .switch {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 5px;
+      cursor: pointer;
+      &.stop {
+        color: @red-color;
+        & p {
+          color: @red-color;
+          text-align: center;
+        }
+        &:before {
+          display: block;
+          width: 30px;
+          height: 30px;
+          content: '';
+          border-radius: 2px;
+          margin: auto;
+          background: @red-color;
+        }
+      }
+      &.play {
+        color: @green-color;
+
+        & p {
+          color: @green-color;
+          text-align: center;
+        }
+        &:before {
+          font-family: "anticon" !important;
+          display: block;
+          content: '\e60a';
+          width: 30px;
+          height: 35px;
+          margin: -5px auto auto;
+          font-size: 30px;
+
+        }
+      }
+    }
+
+  }
+  & .info {
+
+    & ul li {
+      width: 50%;
+    }
+  }
+  & .user-comments {
+    width: 95%;
+    margin: auto;
+    position: relative;
+    & > p {
+      font-size: 16px;
+      color: @text-color;
+      font-weight: bold;
+      text-indent: 1em;
+      display: block;
+      margin-bottom: 15px;
+    }
+    & .comments-title {
+      border-bottom: 1px solid @line-color;
+      color: @text-color;
+      position: relative;
+      & .user-switch-input {
+        color: @text-color;
+      }
+      & .user-switch-add-btn {
+        color: @primary-color;
+        text-shadow: 0 5px 5px rgba(0, 0, 0, .15);
+      }
+    }
+  }
+  & .user-switch {
+    margin: 70px auto;
+    &:after {
+      display: block;
+      clear: both;
+      content: "";
+      visibility: hidden;
+      height: 0;
+    }
+    & .content-wap {
+      height: 500px;
+      overflow: hidden;
+    }
+    & .tags, & .locations, & .users {
+      overflow: hidden;
+    }
+    & .tags-title {
+      background: @blue-color;
+    }
+    & .locations-title {
+      background: @purple-color;
+    }
+    & .users-title {
+      background: @green-color;
+    }
+    & .users {
+      & .user-switch-list {
+        & > ul > li {
+          text-indent: 3em;
+        }
+      }
+    }
+    & .user-switch-user-img {
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+      background: @text-color center/ cover;
+      display: block;
+      position: absolute;
+      top: 15px;
+      left: 10px;
+    }
+    &-input {
+      outline: none;
+      border: none;
+      width: 100%;
+      line-height: 60px;
+      font-size: 16px;
+      padding: 0 40px 0 20px;
+      background: transparent;
+      color: #fff;
+    }
+    &-add-btn {
+      position: absolute;
+      top: 22px;
+      right: 15px;
+      font-size: 18px;
+      color: #ffffff;
+      text-shadow: 0 8px 18px rgba(0, 0, 0, .15);
+      cursor: pointer;
+    }
+    & input::-webkit-input-placeholder {
+      color: #ffffff;
+    }
+    & input::-moz-placeholder {
+      color: #ffffff;
+    }
+    & input:-ms-input-placeholder {
+      color: #ffffff;
+    }
+    &-list {
+      position: relative;
+      height: 360px;
+      overflow-y: auto;
+      & ul {
+        overflow: hidden;
+        & li {
+          height: 60px;
+          transition: background .3s @ease-out, border .3s @ease-out;
+          padding-top: 18px;
+          text-indent: 1em;
+          font-size: 16px;
+          color: @primary-color;
+          border-bottom: 1px solid @line-color;
+          & > i {
+            background: url("/images/remove.png") center/cover;
+            width: 46px;
+            height: 46px;
+            position: absolute;
+            top: 10px;
+            right: 5px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity .3s @ease-out;
+          }
+          &:hover {
+            background: @hover-color;
+            border-bottom: 1px solid transparent;
+            & > i {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    &-wap {
+      height: 80px;
+      box-shadow: 0 -5px 30px rgba(0, 0, 0, .15);
+      & ul {
+        overflow: hidden;
+        height: 100%;
+        & li {
+          width: 50%;
+          float: left;
+          height: 100%;
+          text-align: center;
+          & > p {
+            margin-top: 5px;
+            font-size: 14px;
+            color: @text-color;
+          }
+          & .user-switch-switch {
+            width: 80px;
+            height: 30px;
+            border-radius: 30px;
+            margin-top: 20px;
+            position: relative;
+            border: 1px solid @line-color;
+            background-color: @line-color;
+            &:after {
+              width: 40px;
+              height: 30px;
+              border-radius: 30px;
+              top: -1px;
+              left: -1px;
+              box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+            }
+            & i {
+
+              position: absolute;
+              top: 7px;
+              left: 8px;
+            }
+            & .like {
+              background: url("/images/like.png") center/cover;
+              width: 19px;
+              height: 17px;
+            }
+            & .like-disabled {
+              background: url("/images/like-d.png") center/cover;
+              width: 19px;
+              height: 17px;
+              left: 22px;
+            }
+            & .comment {
+              background: url("/images/comment.png") center/cover;
+              width: 19px;
+              height: 21px;
+              top: 3px;
+            }
+            & .comment-disabled {
+              background: url("/images/comment-d.png") center/cover;
+              width: 19px;
+              height: 21px;
+              left: 22px;
+              top: 3px;
+            }
+          }
+          & .user-switch-switch.ant-switch-checked {
+            border: 1px solid @green-color;
+            background-color: @green-color;
+            &:after {
+              left: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .@{dashboard} {
+    & .content-wap {
+      width: 80%;
+      margin: 10px auto;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+
+}

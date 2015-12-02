@@ -1,0 +1,36 @@
+#react-content {
+  & footer {
+    background: #e3e8f4;
+    height: 144px;
+    & .footer-wap {
+      max-width: 1200px;
+      margin: auto;
+      & .line {
+        width: 94%;
+        margin: auto;
+        height: 1px;
+        background: #D8DDEA;
+      }
+      & p{
+        text-align: center;
+        color: #B2BCD3;
+        font-size: 12px;
+        margin: 40px auto 15px;
+      }
+      & .icon-wap{
+        max-width: 300px;
+        margin: auto;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 414px) {
+  #react-content {
+    & footer {
+      height: 170px;
+      & p{
+        width: 80%;
+      }
+    }
+  }
+}

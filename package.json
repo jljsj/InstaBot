@@ -1,0 +1,43 @@
+{
+  "name": "instabot",
+  "version": "0.1.0",
+  "description": "InstaBot",
+  "entry": {
+    "index": "./src/entry/index.jsx",
+    "user": "./src/entry/user.jsx"
+  },
+  "dependencies": {
+    "antd": "0.10.x",
+    "async-validator": "^1.3.4",
+    "gsap-react-plugin": "^1.0.2",
+    "rc-align": "2.x",
+    "rc-animate": "2.x",
+    "rc-dialog": "~5.2.1",
+    "rc-queue-anim": "0.11.x",
+    "rc-util": "2.x",
+    "object-assign": "4.x"
+  },
+  "devDependencies": {
+    "antd-bin": "0.10.x",
+    "babel-eslint": "~4.0.5",
+    "eslint": "~1.6.0",
+    "eslint-config-airbnb": "~0.1.0",
+    "eslint-plugin-react": "~3.5.1",
+    "expect.js": "~0.3.1",
+    "pre-commit": "1.x",
+    "antd-build": "0.4.x",
+    "react": "~0.14.x",
+    "react-dom": "~0.14.x",
+    "react-router": "1.0.0-rc4"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "scripts": {
+    "start": "npm run dev && npm run build",
+    "dev": "antd server --port 8011",
+    "test": "antd test",
+    "lint": "eslint --ext .js,.jsx src",
+    "build": "rm -rf dist && antd-build && mkdir -p dist/${npm_package_name}/${npm_package_version} && mv dist/*.* dist/${npm_package_name}/${npm_package_version}/"
+  }
+}

@@ -1,0 +1,66 @@
+@import '../common/style/custom.less';
+
+@prefixCls: message;
+.@{prefixCls} {
+  position: fixed;
+  z-index: 8888;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  & .@{prefixCls}-left-bg, & .@{prefixCls}-right-bg {
+    display: block;
+    position: absolute;
+    top: 0;
+    content: '';
+    background: @blue-color;
+    width: 50%;
+    height: 100%;
+  }
+  & .@{prefixCls}-left-bg {
+    animation: zoomXIn .3s @ease-in-out;
+    transform-origin: 0 0;
+  }
+  & .@{prefixCls}-right-bg {
+    right: 0;
+    animation: zoomXIn .3s @ease-in-out;
+    transform-origin: 100% 50%;
+  }
+  & span {
+    position: relative;
+    color: #fff;
+    font-size: 14px;
+    animation: antMoveUpIn .3s @ease-out-quint .3s;
+    animation-fill-mode: both;
+    display: block;
+    background: @blue-color;
+  }
+  &.@{prefixCls}-close {
+    & .@{prefixCls}-left-bg {
+      animation: zoomXOut .3s @ease-in-out .3s;
+      animation-fill-mode: both;
+    }
+    & .@{prefixCls}-right-bg {
+      animation: zoomXOut .3s @ease-in-out .3s;
+      animation-fill-mode: both;
+    }
+    & span {
+      animation: antMoveUpOut .3s @ease-in-quint;
+      animation-fill-mode: both;
+    }
+  }
+}
+
+@keyframes zoomXIn {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes zoomXOut {
+  to{
+    transform: scaleX(0);
+  }
+}

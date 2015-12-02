@@ -1,0 +1,85 @@
+@import './custom.less';
+
+::selection {
+  background: @blue-color;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: @blue-color;
+  color: #fff;
+}
+
+img {
+  display: block;
+}
+
+#react-content, .rc-dialog-container {
+  & .blue-button, & .green-button {
+    width: 30%;
+    max-width: 190px;
+    height: 3em;
+    max-height: 54px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0;
+    color: #ffffff;
+    border: none;
+    transition: box-shadow .3s @ease-out, transform .3s @ease-out;
+  }
+  & .blue-button:hover, & .green-button:hover {
+    border: none;
+
+  }
+  & .blue-button:hover {
+    box-shadow: 0 4px 4px rgba(104, 141, 250, .4);
+  }
+  & .green-button:hover {
+    box-shadow: 0 4px 4px rgba(68, 211, 120, .4);
+  }
+  & .blue-button:active {
+    box-shadow: 0 0px 0px rgba(104, 141, 250, .4);
+    transform: translateY(2px) scale(.98);
+  }
+  & .green-button:active {
+    box-shadow: 0 0px 0px rgba(68, 211, 120, .4);
+    transform: translateY(2px) scale(.98);
+  }
+  & .blue-button {
+    background: @blue-color;
+    box-shadow: 0 8px 8px rgba(104, 141, 250, .4);
+  }
+  & .green-button {
+    background: @green-color;
+    box-shadow: 0 8px 8px rgba(68, 211, 120, .4);
+  }
+  & .create-account {
+    width: auto;
+    padding: 0 20px;
+  }
+  & .no-radius {
+    border-radius: 0;
+    max-width: none;
+  }
+}
+
+.page-load {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  color: @blue-color;
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  left: 50%;
+  margin-left: -25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+  text-align: center;
+  font-size: 26px;
+  line-height: 50px;
+}
+
+.user-router-wrap > .queue-anim-leaving {
+  position: absolute;
+  width: 100%;
+}

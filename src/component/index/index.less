@@ -1,0 +1,364 @@
+@import '../../common/style/index.less';
+
+html, body {
+  color: @primary-color;
+
+  background: rgb(250, 250, 250); /* Old browsers */
+  //background: -moz-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(227,232,244,1) 100%); /* FF3.6-15 */
+  //background: -webkit-linear-gradient(top, rgba(250,250,250,1) 0%,rgba(227,232,244,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  //background: linear-gradient(to bottom, rgba(250,250,250,1) 0%,rgba(227,232,244,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#e3e8f4',GradientType=0 ); /* IE6-9 */
+}
+
+#react-content {
+  width: 100%;
+  background: url("/images/banner.jpg") repeat-y top center/ 100%;
+  //animation: backgroundAnim 90s linear 1s infinite;
+
+  & .banner-wap {
+    width: 100%;
+    background: rgb(250, 250, 250); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(250, 250, 250, 0) 0%, rgba(250, 250, 250, 1) 80%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(250, 250, 250, 0) 0%, rgba(250, 250, 250, 1) 80%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(250, 250, 250, 0) 0%, rgba(250, 250, 250, 1) 80%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    & .banner {
+      min-height: 900px;
+      & .logo {
+        display: block;
+        max-width: 303px;
+        width: 100%;
+        margin: 20px auto auto;
+        & span {
+          display: block;
+        }
+        & .logo-img {
+          margin: auto;
+          width: 92px;
+          height: 92px;
+          background: url("/images/logo.png") center/cover;
+        }
+        & .logo-text {
+          width: 303px;
+          height: 31px;
+          background: url("/images/logo_text.png") center/cover;
+          margin-top: 20px;
+        }
+      }
+      & h1 {
+        font-size: 2.5em;
+        font-weight: normal;
+        text-align: center;
+        margin-top: 20px;
+      }
+      & .button-wap {
+        margin-top: 30px;
+        text-align: center;
+        & p {
+          display: inline-block;
+          width: 50px;
+          color: #B2BCD3;
+          font-size: 14px;
+        }
+      }
+      & .user-name{
+        font-size: 14px;
+        line-height: 40px;
+      }
+      & .macbook {
+        width: 89%;
+        margin: 55px auto auto;
+        overflow: hidden;
+        position: relative;
+        & .website {
+          width: 74.7%;
+          height: 77%;
+          overflow: hidden;
+          position: absolute;
+          top: 5.5%;
+          left: 12.7%;
+          border-radius: 1.8% 1.8% 0 0;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  & .content-wap {
+    width: 100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fafafa+0,eceff5+100 */
+    background: #fafafa; /* Old browsers */
+    background: -moz-linear-gradient(top, #fafafa 0%, #eceff5 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #fafafa 0%, #eceff5 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #fafafa 0%, #eceff5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#eceff5', GradientType=0); /* IE6-9 */
+  }
+  & .content {
+    min-height: 687px;
+    & > h3 {
+      font-weight: 500;
+      color: #B2BCD3;
+      margin: 40px auto auto;
+    }
+    & p {
+      line-height: 40px;
+      margin: 30px auto;
+      max-width: 720px;
+    }
+    & .line {
+      background: #D8D8D8;
+    }
+    & .how-img-wap {
+      margin: 60px auto;
+      & .how-img-box {
+        width: 78%;
+        margin: auto;
+        text-align: center;
+      }
+      & h3.how-img-box {
+        font-size: 20px;
+        font-weight: normal;
+        margin-top: 20px;
+      }
+      & p.how-img-box {
+        color: #373940;
+        font-weight: lighter;
+        line-height: 18px;
+        font-size: 14px;
+        margin-top: 15px;
+        width: 75%;
+      }
+    }
+  }
+  & .community-wap {
+    background: url("/images/bigmontuain.jpg") no-repeat center /cover;
+    height: 700px;
+    & .community {
+      & h3 {
+        color: rgba(255, 255, 255, .5);
+        margin-top: 80px;
+      }
+      & p {
+        color: #ffffff;
+        margin: 30px auto;
+      }
+      & .line {
+        background: rgba(255, 255, 255, .3);
+      }
+      & .comm-img-wap {
+        position: relative;
+        width: 90%;
+        margin: 100px auto auto;
+        & span {
+          color: @yellow-color;
+          font-weight: bold;
+          font-size: 44px;
+          text-shadow: 0 2px 25px rgba(0, 0, 0, .5);
+          position: absolute;
+        }
+        & h4 {
+          text-align: center;
+          color: #fff;
+          font-size: 14px;
+          margin-top: 60px;
+          text-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+        }
+        & .comm-img {
+          width: 80%;
+          max-width: 140px;
+          margin: auto;
+        }
+        & .comm-love-text {
+          top: 20%;
+          left: 40%;
+        }
+        & .comm-chat-text {
+          top: 5%;
+          right: 30%;
+        }
+        & .comm-user-text {
+          top: 35%;
+          left: 40%;
+        }
+      }
+    }
+  }
+
+  & .pricing-wap {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eceff5+0,e3e8f4+100 */
+    background: #eceff5; /* Old browsers */
+    background: -moz-linear-gradient(top, #eceff5 0%, #e3e8f4 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #eceff5 0%, #e3e8f4 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #eceff5 0%, #e3e8f4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eceff5', endColorstr='#e3e8f4', GradientType=0); /* IE6-9 */
+    min-height: 803px;
+    & .pricing {
+      & h3 {
+        color: #B2BCD3;
+        margin-top: 30px;
+      }
+      & p {
+        margin: 30px auto;
+      }
+      & .line {
+        background: #D8D8D8;
+      }
+      & .pricing-pay {
+        width: 96%;
+        margin: 80px auto auto;
+      }
+    }
+  }
+
+  & .community, & .pricing, & .content, & .banner {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    & h3 {
+      font-weight: 500;
+      text-align: center;
+
+    }
+    & p {
+      text-align: center;
+      font-size: 24px;
+
+    }
+    & .line {
+      width: 30%;
+      height: 1px;
+      margin: auto;
+    }
+
+  }
+  & .bottom-btn-wap {
+    text-align: center;
+    margin: 60px auto 120px;
+    & .blue-button {
+      max-width: 270px;
+    }
+
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  #react-content {
+    & .banner-wap {
+      & .banner {
+        min-height: 700px;
+        & h1 {
+          font-size: 20px;
+          margin: 20px 10px;
+        }
+      }
+    }
+
+    & .content {
+      & .how-content {
+        width: 90%;
+        line-height: 20px;
+        font-size: 16px;
+      }
+    }
+    & .community-wap {
+
+      & .community {
+        & p {
+          width: 90%;
+          font-size: 16px;
+        }
+        & .comm-img-wap {
+          & span {
+            font-size: 30px;
+            text-shadow: 0 2px 15px rgba(0, 0, 0, .5);
+          }
+        }
+      }
+    }
+    & .bottom-btn-wap {
+      & .blue-button {
+        max-width: 270px;
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+.queue-anim-entering {
+  transition: none;
+  opacity: 0;
+}
+
+.queue-anim-leaving {
+  transition: none;
+}
+
+@media only screen and (max-width: 767px) {
+  #react-content {
+    & .banner-wap {
+      & .banner {
+        min-height: 500px;
+      }
+    }
+
+    & .content, & .pricing {
+      & > h3 {
+        font-size: 24px;
+      }
+      & > p {
+        width: 80%;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+    & .content {
+
+      & .how-img-wap {
+        & .how-img-box {
+          width: 80%;
+        }
+
+        & p.how-img-box {
+          width: 80%;
+        }
+      }
+    }
+    & .community-wap {
+      display: none;
+    }
+    & .content .how-img-wap, {
+      margin-top: auto;
+      & .col-8 {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+    & .pricing-wap .pricing .pricing-pay {
+      margin: 20px auto auto;
+      width: 80%;
+      & .col-8 {
+        width: 100%;
+        margin-top: 40px;
+      }
+    }
+    & .bottom-btn-wap {
+      margin-bottom: 80px;
+      & .blue-button {
+        width: 80%;
+
+      }
+
+    }
+
+  }
+}
+
+@keyframes backgroundAnim {
+  0% {
+    background-position: left 0;
+  }
+  100% {
+    background-position: left -40%;
+  }
+}

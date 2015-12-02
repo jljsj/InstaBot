@@ -1,0 +1,127 @@
+
+@instauser: instauser;
+.@{instauser} {
+  cursor: pointer;
+  color: @primary-color;
+  overflow: hidden;
+  & ul {
+    position: relative;
+    & li {
+      float: left;
+    }
+  }
+  &-img {
+    width: 30%;
+    height: 100px;
+  }
+  &-add-text {
+    width: 70%;
+    line-height: 100px;
+    height: 100px;
+    overflow: hidden;
+    font-size: 16px;
+    color: @text-color;
+    text-indent: 1em;
+  }
+  &:after {
+    display: none;
+  }
+  & .glyph {
+    background: #4E9AD8;
+    &:before {
+      display: block;
+      content: '';
+      background: url("/images/Glyph2.png") center/cover;
+      width: 29px;
+      height: 29px;
+      margin: 35px auto;
+    }
+  }
+
+  &-user-text {
+    width: 70%;
+    height: 100px;
+    overflow: hidden;
+    & > p {
+      width: 100%;
+      display: block;
+      line-height: 50px;
+      padding-left: 10px;
+      color: @primary-color;
+      border-bottom: 1px solid #EFF0F1;
+      position: relative;
+      & i {
+        transform: scale(.5);
+        position: absolute;
+        top: 20px;
+        right: 10px;
+      }
+
+    }
+  }
+  & .instauser-user-followers {
+    width: 100%;
+    padding-left: 10px;
+    line-height: 50px;
+    & .number-text {
+      font-size: 16px;
+      color: @primary-color;
+      font-weight: bold;
+    }
+    & .text {
+      font-size: 14px;
+      color: @text-color;
+      font-weight: lighter;
+      padding-left: 5px;
+    }
+    & .user {
+      background: @orange-color;
+      width: 75px;
+      height: 30px;
+      float: right;
+      border-radius: 2px;
+      margin: 10px 10px auto auto;
+      & i {
+        background: url("/images/dash-user.png") no-repeat center/cover;
+        width: 18px;
+        height: 18px;
+        float: left;
+        margin: 6px auto auto 6px;
+      }
+      & p {
+        line-height: 30px;
+        color: #ffffff;
+        float: left;
+        padding-left: 5px;
+      }
+    }
+  }
+  &-container {
+    position: absolute;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 8px 40px rgba(73, 85, 106, .15);
+    animation: instaDropScaleIn .3s @ease-in-out-circ;
+    transform-origin: 0 0;
+    & .instauser-drop {
+    }
+  }
+  &-container-close {
+    animation: instaDropScaleOut .3s @ease-in-out-circ;
+    animation-fill-mode: both;
+    & .instauser-drop {
+    }
+  }
+}
+
+@keyframes instaDropScaleIn {
+  from{
+    transform: scaleY(0);
+  }
+}
+
+@keyframes instaDropScaleOut {
+  to{
+    transform: scaleY(0);
+  }
+}

@@ -1,0 +1,301 @@
+@import '../common/style/index.less';
+
+.login-dialog {
+  width: 1000px;
+  height: 500px;
+  transition: height .5s @ease-out;
+  & .glyph {
+    background: url("/images/Glyph.png") no-repeat center/cover;
+    width: 22px;
+    height: 22px;
+    display: block;
+    position: absolute;
+    left: 445px;
+    top: 30px;
+  }
+  & .ant-carousel {
+    width: 50%;
+    background: #ccc;
+    height: 100%;
+    float: left;
+    position: relative;
+
+    & .slick-slider {
+      height: 100%;
+      padding: 0;
+      text-align: center;
+      & .slick-list {
+        height: 100%;
+        & .slick-track {
+          height: 100%;
+        }
+      }
+      & .slick-dots {
+        background: rgba(0, 0, 0, .5);
+        border-radius: 12px;
+        height: 24px;
+        padding: 0 10px;
+        display: inline-block !important;
+        width: auto;
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+        bottom: 34px;
+        & .slick-active {
+          & button {
+            background: #fff;
+          }
+        }
+        & li {
+          width: 10px;
+          height: 10px;
+          margin: 0 2px;
+          & button {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, .5);
+            padding: 0;
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  & .ant-tabs {
+    float: left;
+    width: 50%;
+    padding-left: 35px;
+    & .ant-tabs-tabs-bar {
+      border: none;
+    }
+    & .ant-tabs-nav {
+      font-size: 42px;
+      font-weight: bold;
+      & .ant-tabs-tab > .ant-tabs-tab-inner {
+        color: #DADADA;
+      }
+      & div.ant-tabs-tab-active > .ant-tabs-tab-inner {
+        color: #2A2B31;
+      }
+      & .ant-tabs-ink-bar {
+        background-color: #2A2B31;
+      }
+    }
+    & .ant-tabs-nav-container-scrolling {
+      padding: 0;
+    }
+    & .ant-tabs-tab-prev, & .ant-tabs-tab-next {
+      display: none;
+    }
+  }
+
+  & .ant-form-inline {
+    margin: 40px auto auto auto;
+    & * {
+      display: block;
+    }
+
+    & .ant-btn {
+      margin-top: 30px;
+      display: inline-block;
+    }
+    & .forgot {
+      float: right;
+      display: inline-block;
+      line-height: 48px;
+      margin-top: 30px;
+      color: #A0A0A0;
+      font-size: 14px;
+      font-weight: lighter;
+    }
+    & .ant-form-item {
+      display: block;
+      margin-bottom: 0px;
+      & label {
+        display: block;
+        text-align: left;
+        color: #A0A0A0;
+        font-size: 14px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+      }
+      & .error-text {
+        color: #FF7D70;
+        font-size: 12px;
+        position: absolute;
+      }
+
+      & .ant-input {
+        width: 100%;
+        border-radius: 0;
+        background: #F1F2FF;
+        border: 2px solid transparent;
+        font-size: 16px;
+        height: 50px;
+        font-weight: bold;
+        text-indent: .5em;
+        &:focus {
+          border: 2px solid #9EA4F8;
+          box-shadow: none;
+        }
+        &.error {
+          border: 2px solid #FF7D70;
+          animation: antSwingIn .3s linear;
+        }
+      }
+    }
+  }
+  & .login-insta {
+    float: left;
+    width: 50%;
+    padding-left: 35px;
+    & h1 {
+      font-size: 40px;
+      color: @primary-color;
+    }
+    &-bottom {
+      margin-top: 50px;
+      line-height: 20px;
+      font-size: 14px;
+      & h3 {
+        color: @green-color;
+      }
+      & p {
+        color: @text-color;
+        font-size: 12px;
+      }
+    }
+    & .login-check {
+      float: right;
+      width: 150px;
+      margin-top: 20px;
+      & .ant-checkbox {
+        float: left;
+        & .ant-checkbox-inner {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          border-radius: 0px;
+          margin-top: 5px;
+          overflow: hidden;
+          &:after{
+            transform: scale(0);
+          }
+        }
+        & .ant-checkbox-input {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      & .ant-checkbox-checked {
+        & .ant-checkbox-inner {
+          background: #F1F2FF;
+          border-radius: 0px;
+          border: none;
+          font-family: "anticon" !important;;
+          &:after {
+            border: none;
+            width: 12px;
+            background: none;
+            height: 16px;
+            content: '\e62e';
+            transform: scale(1);
+            color: @green-color;
+            top:4px;
+            left:4px;
+          }
+        }
+      }
+      & p {
+        width: 80%;
+        float: right;
+        font-size: 12px;
+        font-weight: normal;
+        text-align: right;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .rc-dialog-container {
+    & .login-dialog {
+      width: 500px !important;
+      height: auto !important;
+      top: 50% !important;
+      margin-top: -275px !important;
+      & .ant-carousel {
+        display: none;
+      }
+      & .ant-tabs, & .login-insta {
+        width: 100%;
+        padding: 0;
+        & .ant-tabs-nav {
+          font-size: 40px;
+        }
+      }
+      & .ant-form-inline {
+        & .ant-btn {
+          margin-bottom: 40px;
+        }
+      }
+      & .login-insta {
+        &-bottom {
+          margin-top: 0px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 414px) {
+  .rc-dialog-container {
+    .login-dialog {
+      width: 300px !important;
+      top: 50% !important;
+      margin-top: -210px !important;
+      & .ant-tabs {
+        & .ant-tabs-nav {
+          font-size: 20px;
+        }
+      }
+      & .ant-form-inline {
+        margin: 0px auto auto auto;
+        & .ant-btn {
+          display: inline-block;
+          font-size: 14px;
+          height: 40px;
+        }
+        & .forgot {
+          line-height: 40px;
+        }
+        & .ant-form-item {
+          display: block;
+          margin-bottom: 0px;
+          & label {
+            color: #A0A0A0;
+            font-size: 12px;
+          }
+
+          & .ant-input {
+            font-size: 16px;
+            height: 40px;
+          }
+        }
+      }
+      & .login-insta {
+        & h1 {
+          font-size: 20px;
+        }
+        &-bottom {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

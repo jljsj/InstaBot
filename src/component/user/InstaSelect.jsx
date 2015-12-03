@@ -46,7 +46,7 @@ class InstaSelect extends React.Component {
       }
       return <div className="instauser" key={i} onClick={this.listClick.bind(this, i)}>
         <ul>
-          <li className='instauser-img glyph' style={{backgroundImage: data.profilePicture}}></li>
+          <li className='instauser-img glyph' style={{backgroundImage: (data.profilePicture || 'url(/images/defaultAvatar.png)')}}></li>
           <li className='instauser-add-text'>{data.username}</li>
         </ul>
       </div>
@@ -101,10 +101,10 @@ class InstaSelect extends React.Component {
 
   render() {
     const userData = this.state.userData.accounts[this.state.userNum];
-    const img = userData.profilePicture;
+    const img = userData.profilePicture || 'url(/images/defaultAvatar.png)';
     return <div className='instauser' onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
       <ul>
-        <li className='instauser-img glyph' style={{backgroundImage: img}}></li>
+        <li className='instauser-img' style={{backgroundImage: img}}></li>
         <li className='instauser-user-text'>
           <p>{userData.username}
             <Icon type="caret-down" />

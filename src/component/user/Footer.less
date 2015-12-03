@@ -1,22 +1,88 @@
 
 footer {
-  width: 95%;
-  margin: 46px auto auto;
-  border-top: 1px solid #D8DDEA;
-  & .left-copy {
-    color: #B2BCD3;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  .footer-wap {
+    width: 95%;
+    margin: 46px auto auto;
+    border-top: 1px solid #D8DDEA;
+    overflow: hidden;
     padding: 20px;
-    & .left-icon{
-      width: 200px;
-      overflow: hidden;
-      margin-top: 10px;
-      & ul li{
-        float: left;
-        width: 20%;
-        margin-left: 6.666%;
-        &:first-child{
-          margin-left: 0;
+    & .left-copy {
+      color: #B2BCD3;
+      width: 60%;
+      float: left;
+      & .left-icon {
+        width: 200px;
+        overflow: hidden;
+        margin-top: 10px;
+        & ul li {
+          float: left;
+          width: 20%;
+          margin-left: 6.666%;
+          &:first-child {
+            margin-left: 0;
+          }
         }
+      }
+    }
+    & .right-data {
+      width: 40%;
+      float: left;
+      position: relative;
+      & ul {
+        & li {
+          float: left;
+          width: 50%;
+          & span {
+            text-align: right;
+            font-weight: bold;
+            color: #B2BCD3;
+            margin-left: 5%;
+            margin-top: 20px;
+            display: block;
+            float: right;
+            & h1 {
+              font-size: 30px;
+            }
+          }
+          & i {
+            width: 48px;
+            height: 48px;
+            float: right;
+            display: block;
+            margin-top: 30px;
+            &.like-icon {
+              background: url("/images/like-footer.png") center/ cover;
+            }
+            &.comm-icon {
+              background: url("/images/comm-footer.png") center/ cover;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  footer {
+    .footer-wap {
+      width: 80%;
+      margin: 20px auto auto;
+      text-align: center;
+      & .left-copy {
+        width: 100%;
+        float: none;
+        & .left-icon {
+          margin: 10px auto auto;
+        }
+      }
+      & .right-data {
+        display: none;
       }
     }
   }

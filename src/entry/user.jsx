@@ -57,7 +57,7 @@ class App extends React.Component {
 
     return this.state.userData ? <div>
       <Header selectedKeys={keys} userName = {this.state.userName}/>
-      <QueueAnim type={['right', 'left']} className="user-router-wrap">
+      <QueueAnim type={'bottom'} className="user-router-wrap" duration={600}>
           {React.cloneElement(this.props.children || <Dashboard/>, {
             key: key,
             userData: this.state.userData,

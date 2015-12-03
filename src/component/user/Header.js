@@ -41,10 +41,10 @@ class Header extends React.Component {
     </Menu>;
 
     return <header className='user-header'>
-      <div className='user-header-logo'>
+      <a className='user-header-logo' href="/">
         <span></span>
         <p>InstaBot</p>
-      </div>
+      </a>
       <Menu style={{marginBottom: 10}} mode="horizontal" selectedKeys={this.props.selectedKeys}>
         <Menu.Item key="dashboard">
           <Link to="/dashboard">Dashboard</Link>

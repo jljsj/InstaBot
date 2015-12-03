@@ -1,7 +1,5 @@
 @dashboard: dashboard;
 .@{dashboard} {
-  max-width: 1200px;
-  margin: auto;
   & .content-wap {
     background: #fff;
     box-shadow: 0 8px 40px rgba(73, 85, 106, .15);
@@ -298,14 +296,21 @@
   .@{dashboard} {
     & .content-wap {
       width: 80%;
-      margin: 10px auto;
+      margin: 20px auto;
       &:first-child {
         margin-top: 0;
       }
+
+    }
+    & .user-switch {
+      margin: 20px auto;
+    }
+    & .user-comments {
+      width: 100%;
+      & > p {
+        width: 80%;
+        margin: auto;
+      }
     }
   }
-}
-
-@media only screen and (max-width: 375px) {
-
 }

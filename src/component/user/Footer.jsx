@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import {toMoney} from '../utils';
+import Message from '../Message';
 
 class Footer extends React.Component {
   constructor() {
@@ -20,16 +21,27 @@ class Footer extends React.Component {
       success: (data)=> {
         if (data.code === '200') {
           this.setState({
-            totalLikes: 0,//data.site_statistics.totalFollows,
-            totalComments: 0,//data.site_statistics.totalFollows,
-            totalFollows: 0,//data.site_statistics.totalFollows
+            totalLikes: data.site_statistics.totalLikes,
+            totalComments: data.site_statistics.totalComments,
+            totalFollows: data.site_statistics.totalFollows
           })
-        } else {
-          location.href = '/';
         }
+        const m = Message.success({content: data.msg});
+        setTimeout(()=> {
+          const _comp = m.component;
+          if (!_comp.state.children.length) {
+            m.remove();
+          }
+        }, 3000);
       },
       error: ()=> {
-        return location.href = '/';
+        const m = Message.success({content: data.msg});
+        setTimeout(()=> {
+          const _comp = m.component;
+          if (!_comp.state.children.length) {
+            m.remove();
+          }
+        }, 3000);
       }
     });
   }

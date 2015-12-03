@@ -3,6 +3,7 @@ import { findDOMNode } from 'react-dom';
 import { Row, Col } from 'antd/lib/layout';
 import QueueAnim from 'rc-queue-anim';
 import { toMoney } from '../utils';
+import Message from '../Message';
 require('gsap-react-plugin');
 
 const Community = React.createClass({
@@ -15,12 +16,44 @@ const Community = React.createClass({
     }
   },
 
+  componentWillMount() {
+    $.ajax({
+      type: 'POST',
+      url: 'http://139.162.27.27:8080/statistics',
+      data: '',
+      success: (data)=> {
+        if (data.code === '200') {
+          this.data={
+            love: data.site_statistics.totalLikes,
+            chat: data.site_statistics.totalComments,
+            user: data.site_statistics.totalFollows
+          }
+        }
+        const m = Message.success({content: data.msg});
+        setTimeout(()=> {
+          const _comp = m.component;
+          if (!_comp.state.children.length) {
+            m.remove();
+          }
+        }, 3000);
+      },
+      error: ()=> {
+        const m = Message.success({content: data.msg});
+        setTimeout(()=> {
+          const _comp = m.component;
+          if (!_comp.state.children.length) {
+            m.remove();
+          }
+        }, 3000);
+      }
+    });
+  },
+
   componentDidUpdate() {
     if (this.props.scrollShow && !this.show) {
       setTimeout(()=> {
-        const state = this.state;
         TweenMax.to(this, .8, {
-          state: {love: 121320, chat: 222200, user: 3213300}
+          state: {love: this.data.love, chat: this.data.chat, user: this.data.user}
         })
       }, 500);//queueAnim delay 300;
       this.show = true

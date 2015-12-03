@@ -47,7 +47,6 @@ const App = React.createClass({
     }
 
     const _data = JSON.parse(cookie);
-    console.log(_data)
     if (_data.uid && _data.session) {
       $.ajax({
         type: 'POST',
@@ -75,9 +74,6 @@ const App = React.createClass({
         }
       });
     }
-  },
-  componentDidMount() {
-
   },
   Logout() {
     $.cookie('InstaBot', '', {expires: -1});

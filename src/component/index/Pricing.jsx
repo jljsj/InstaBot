@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd/lib/layout';
 import Pay from '../Pay';
-import Button from 'antd/lib/Button';
+import Button from 'antd/lib/button';
 import QueueAnim from 'rc-queue-anim';
 
 const Pricing = React.createClass({

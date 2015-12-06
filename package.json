@@ -15,7 +15,8 @@
     "rc-dialog": "~5.2.1",
     "rc-queue-anim": "0.11.x",
     "rc-util": "2.x",
-    "object-assign": "4.x"
+    "object-assign": "4.x",
+    "history": "1.13.1"
   },
   "devDependencies": {
     "antd-bin": "0.10.x",

@@ -1,6 +1,6 @@
 import React from 'react';
 import Login from '../Login';
-import Button from 'antd/lib/Button';
+import Button from 'antd/lib/button';
 import QueueAnim from 'rc-queue-anim';
 import Message from '../Message';
 

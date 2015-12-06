@@ -3,7 +3,7 @@ import ReactDom from 'react-dom';
 import Pay from '../Pay';
 import QueueAnim from 'rc-queue-anim';
 import { Row, Col } from 'antd/lib/layout';
-import Button from 'antd/lib/Button';
+import Button from 'antd/lib/button';
 
 class Pricing extends React.Component {
   constructor() {

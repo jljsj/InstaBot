@@ -1,6 +1,6 @@
 import React from 'react';
 import './Pay.less';
-import Button from 'antd/lib/Button';
+import Button from 'antd/lib/button';
 
 class Pay extends React.Component {
   constructor() {

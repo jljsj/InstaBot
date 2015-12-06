@@ -3,7 +3,7 @@ import ReactDOM,{findDOMNode} from 'react-dom';
 import Message from './Message';
 import {Form,Input} from 'antd/lib/form';
 import Checkbox from 'antd/lib/checkbox';
-import Button from 'antd/lib/Button';
+import Button from 'antd/lib/button';
 import AsyncValidate from 'async-validator';
 const FormItem = Form.Item;
 

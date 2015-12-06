@@ -76,7 +76,6 @@ class Dashboard extends React.Component {
         userData={userData}
       />
     }
-    console.log(userData)
     const liks = userData.user_detail.accounts ? userData.user_detail.accounts[this.state.userNum].follows || 0 : 0,
       commentes = userData.user_detail.accounts ? userData.user_detail.accounts[this.state.userNum].medias || 0 : 0;
     return <div className="dashboard">

@@ -82,7 +82,7 @@ class signForm extends React.Component {
       data: this.state.formData,
       success: (data)=> {
         const m = Message.success({content: data.msg});
-        if (Number(data.code) === 200) {
+        if (Number(data.code) === 200 && data.user) {
           //成功
           const _d = {uid: data.user.uid, session: data.user.session};
           $.cookie('InstaBot', JSON.stringify(_d), {expires: 365});

@@ -10,7 +10,7 @@ import Message from '../Message';
 class UserDataSwitch extends React.Component {
   constructor() {
     super(...arguments);
-    this.accounts = this.props.userData.accounts[this.props.userNum];
+    this.accounts = this.props.userData.accounts ? this.props.userData.accounts[this.props.userNum] : {};
 
     this.state = {
       addShow: false,

@@ -128,7 +128,7 @@ class InstaForm extends React.Component {
         <div className='login-check'>
           <label>
             <Checkbox defaultChecked={this.state.checkbox} onChange={this.onChange}/>
-            <p>Yes, I’d like to follow @InstaBot for updates</p>
+            <p>Yes, I’d like to follow @GetFastFame for updates</p>
           </label>
         </div>
       </FormItem>

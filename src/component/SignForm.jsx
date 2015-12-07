@@ -65,7 +65,7 @@ class signForm extends React.Component {
       return
     }
     if (this.props.type === 'up' && _formData.login_pwd !== _formData.re_pwd) {
-      Message.success({content: 'type the same password in both text boxe'});
+      Message.success({content: 'Type the same password in both text field.'});
       this.setState({
         rePasswdError: true,
         login_pwdError: false,
@@ -96,7 +96,7 @@ class signForm extends React.Component {
         }, 3000)
       },
       error: ()=> {
-        const m = Message.success({content: 'Server connection error'});
+        const m = Message.success({content: 'What! Server connection error!'});
         setTimeout(()=> {
           const _comp = m.component;
           if (!_comp.state.children.length) {

@@ -8,8 +8,8 @@ const Content = React.createClass({
     return <div {...this.props}>
       <QueueAnim className='content' type='bottom' leaveReverse={true}>
       {!this.props.scrollShow ? null : [<h3 key='h3'>HOW IT WORKS</h3>,
-        < p key='p'>Instabot is a powerful bot help you auto-like and auto-comment on
-          any instagram photos, then gain similar people’s likes or a follow.</p>,
+        < p key='p'>Fastfame is a powerful tool help you auto-like and auto-comment on
+          any instagram photos, then gain similar people’s likes or follows.</p>,
         <div className='line' key='lien'></div>,
         <Row className='how-img-wap' key='row'>
           <QueueAnim type='bottom'>
@@ -20,7 +20,7 @@ const Content = React.createClass({
               <h3 className="how-img-box">Edit your comments first</h3>
               <p className="how-img-box">You should setup your comments first, nice words
                 would encourage them check out your profile.
-                Yeah, you can set it as your Ads slogan or something.</p>
+                Yeah, you can set it as your Ads slogan or whatever.</p>
             </Col>
 
             <Col span="8" key='1'>
@@ -29,7 +29,7 @@ const Content = React.createClass({
               </div>
               <h3 className="how-img-box">Auto-like & Auto-comment</h3>
               <p className="how-img-box">Automatically like and comment works on
-                Hastags, locations and users you add.
+                target hastags, locations and users you add.
                 <br/>
                 Really fast and impact.</p>
             </Col>

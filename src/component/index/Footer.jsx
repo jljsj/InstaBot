@@ -7,10 +7,10 @@ const Footer = React.createClass({
     return <footer >
       <div className='footer-wap'>
         <div className='line'></div>
-        <p>Copyright © 2015 App Kitchen LLC. Handcrafted by a bunch of people who love Instagram.</p>
+        <p>Copyright © 2015-2016 App Kitchen LLC. Handcrafted by a bunch of people who love Instagram.</p>
         <Row className='icon-wap' type="flex" justify="space-around">
           <Col span="4">
-            <a href="#" target="_blank" >
+            <a href="http://instagram.com/instafame_club" target="_blank" >
               <img src="/images/IG.png"  width="100%" />
             </a>
           </Col>

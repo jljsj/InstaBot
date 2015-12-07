@@ -113,9 +113,9 @@ const App = React.createClass({
         <h1 key='h1'>Get Unlimited Real Followers Automatically</h1>
         <div className='button-wap' key='button'>
         {this.state.userName ? <div key='user' className="user-name">{this.state.userName} |
-          <a href="/user/"> manag </a>
+          <a href="/user/"> Dashboard </a>
           |
-          <a onClick={this.Logout}> logout </a>
+          <a onClick={this.Logout}> Logout </a>
         </div> : [<Button onClick={this.onSign} className='blue-button' key='sign'>Sign up</Button>,
           <p key='or'>OR</p>,
           <Button onClick={this.onLogin} className='green-button' key='login'>Login</Button>]}

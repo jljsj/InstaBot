@@ -50,13 +50,13 @@ class Footer extends React.Component {
     return <footer>
       <div className='footer-wap'>
         <div className="left-copy">
-          <h2>InstaBot</h2>
+          <h2>Fastfame</h2>
           <p>Get Unlimited Real Followers Automatically.</p>
-          <p>Copyright © 2015 App Kitchen LLC. Handcrafted by a bunch of people who love Instagram.</p>
+          <p>Copyright © 2015-2016 App Kitchen LLC. Handcrafted by a bunch of people who love Instagram.</p>
           <div className="left-icon">
             <ul>
               <li>
-                <a href="#" target="_blank" >
+                <a href="http://instagram.com/instafame_club" target="_blank" >
                   <img src="/images/IG.png"  width="100%" />
                 </a>
               </li>
